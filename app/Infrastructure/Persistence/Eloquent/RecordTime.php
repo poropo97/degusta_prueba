@@ -4,12 +4,15 @@ namespace App\Infrastructure\Persistence\Eloquent;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 use App\Infrastructure\Persistence\Eloquent\Task;
 use App\Infrastructure\Persistence\Eloquent\User;
 
 class RecordTime extends Model
 {
+    use HasFactory;
+    
     protected $table = 'records_times';
 
     protected $fillable = [
